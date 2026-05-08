@@ -1,5 +1,22 @@
 import type { LucideIcon } from "lucide-react";
-import { BrainCircuit, Bus, Code2, Cpu, DatabaseZap, Fish, Globe2, Rocket, Search, Sparkles, Wand2 } from "lucide-react";
+import {
+  Bot,
+  BrainCircuit,
+  BriefcaseBusiness,
+  Bus,
+  Code2,
+  Cpu,
+  DatabaseZap,
+  Fish,
+  Globe2,
+  Hammer,
+  Laptop,
+  MonitorCog,
+  Search,
+  Settings2,
+  TestTube2,
+  Wand2,
+} from "lucide-react";
 
 export const links = {
   github: "https://github.com/Danyokkk",
@@ -8,13 +25,15 @@ export const links = {
   bus: "https://bus.daan1k.xyz",
   fish: "https://fish.daan1k.xyz",
   work: "https://work.daan1k.xyz",
+  radanumero: "https://radanumero.com",
+  email: "mailto:dsakhno@isl.cy",
 };
 
 export const navItems = [
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
+  { label: "Work", href: "#work" },
+  { label: "Skills", href: "#skills" },
   { label: "Process", href: "#process" },
-  { label: "Portfolio", href: "#portfolio" },
+  { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -24,49 +43,54 @@ export type IconCard = {
   text: string;
 };
 
-export const services: IconCard[] = [
+export const proofCards: IconCard[] = [
   {
-    icon: BrainCircuit,
-    title: "AI Product Systems",
-    text: "Practical AI workflows, data-powered features, and interfaces that make models useful for real people.",
-  },
-  {
-    icon: Code2,
-    title: "Premium Web Frontends",
-    text: "Responsive Next.js experiences with motion, strong messaging, and performance-aware component architecture.",
+    icon: Laptop,
+    title: "Webflow / Wix / Tilda / Next.js",
+    text: "Comfortable moving from no-code builders to custom React and Next.js builds.",
   },
   {
     icon: DatabaseZap,
-    title: "Data & Automation",
-    text: "Python, Kaggle-style analysis, dashboards, Telegram workflows, and operations that reduce manual work.",
+    title: "Python and data projects",
+    text: "Kaggle work, scripts, dashboards, practical analysis, and data cleaning.",
   },
   {
-    icon: Cpu,
-    title: "Hardware Craft",
-    text: "Custom PCs, clean setup, troubleshooting, and a maker mindset that connects software with physical systems.",
+    icon: Bot,
+    title: "AI automation workflows",
+    text: "AI-assisted research, Telegram workflows, chatbots, and repeatable systems.",
+  },
+  {
+    icon: MonitorCog,
+    title: "Custom PC systems",
+    text: "PC building, troubleshooting, setup, airflow, peripherals, and networking.",
+  },
+  {
+    icon: Globe2,
+    title: "Built in Cyprus",
+    text: "Local products and websites made around real problems, not portfolio filler.",
   },
 ];
 
 export const processSteps = [
   {
     icon: Search,
-    title: "Decode the objective",
-    text: "Clarify the audience, the promise, the proof, and what a visitor should do next.",
+    title: "Understand the goal",
+    text: "Clarify what needs to be built, who it is for, and what success should look like.",
   },
   {
     icon: Wand2,
-    title: "Design the signal",
-    text: "Turn the message into a visual system with hierarchy, motion, and credible details.",
+    title: "Design the structure",
+    text: "Plan the user flow, content hierarchy, pages, components, and proof points before styling.",
   },
   {
-    icon: Rocket,
-    title: "Ship the system",
-    text: "Build with reusable components, accessible markup, optimized assets, and production deployment in mind.",
+    icon: Hammer,
+    title: "Build the product",
+    text: "Create the frontend, automation, data workflow, or website with clean reusable pieces.",
   },
   {
-    icon: Sparkles,
-    title: "Refine by evidence",
-    text: "Test responsive states, console health, interaction paths, motion fallback, and performance budgets.",
+    icon: TestTube2,
+    title: "Test and improve",
+    text: "Check responsiveness, speed, real links, accessibility, and the small details that make it feel finished.",
   },
 ];
 
@@ -76,28 +100,65 @@ export const portfolio = [
     href: links.bus,
     repo: "https://github.com/Danyokkk/cybus",
     icon: Bus,
-    summary: "Live Cyprus bus tracking product with routes, stops, maps, and real-time transport logic.",
-    tags: ["JavaScript", "Maps", "Real-time"],
+    problem: "Cyprus bus information is hard to follow when you need routes, stops, and timing quickly.",
+    value: "Turns transport data into a cleaner, faster product experience for people moving around Cyprus.",
+    visual: "transit",
+    tags: ["JavaScript", "Maps", "Public data"],
   },
   {
     title: "Fishing Cyprus Wiki",
     href: links.fish,
     icon: Fish,
-    summary: "Local knowledge product for fishing spots, species, rules, licenses, and useful Cyprus context.",
-    tags: ["Knowledge base", "SEO", "Local data"],
+    problem: "Local fishing knowledge is scattered across videos, forums, rules, and personal experience.",
+    value: "Organizes spots, species, local context, and search-friendly pages into one practical knowledge base.",
+    visual: "wiki",
+    tags: ["Next.js", "Content", "Local SEO"],
   },
   {
     title: "Work / Marketplace",
     href: links.work,
+    repo: "https://github.com/Danyokkk/cypmfinal",
     icon: Globe2,
-    summary: "Client-facing web work, marketplace direction, business UX, and shipped digital surfaces.",
-    tags: ["Next.js", "Business UX", "Launch"],
+    problem: "Small businesses and local projects need clean pages, clear offers, and fast execution.",
+    value: "A client-facing direction for web work, project presentation, and marketplace-style digital services.",
+    visual: "market",
+    tags: ["TypeScript", "Business UX", "Launch"],
+  },
+  {
+    title: "radanumero.com",
+    href: links.radanumero,
+    icon: BriefcaseBusiness,
+    problem: "A business website needs to look credible, load fast, and be understandable immediately.",
+    value: "Webflow website and SEO structure focused on credibility, clear pages, and search visibility.",
+    visual: "seo",
+    tags: ["Webflow", "SEO", "Website"],
   },
 ];
 
-export const proof = [
-  { value: "19", label: "public GitHub repositories" },
-  { value: "3", label: "live product anchors" },
-  { value: "TLF", label: "Technology Leaders of the Future scholar" },
-  { value: "CY", label: "built in Cyprus" },
+export const skillGroups = [
+  {
+    title: "Frontend",
+    icon: Code2,
+    skills: ["Next.js", "React", "Tailwind CSS", "Webflow", "Wix", "Tilda"],
+  },
+  {
+    title: "AI & Automation",
+    icon: BrainCircuit,
+    skills: ["AI workflows", "Chatbots", "Telegram workflows", "Prompt systems", "Research automation"],
+  },
+  {
+    title: "Data & Python",
+    icon: DatabaseZap,
+    skills: ["Python", "Kaggle", "Dashboards", "Scripts", "Pandas / NumPy"],
+  },
+  {
+    title: "Hardware",
+    icon: Cpu,
+    skills: ["Custom PCs", "Troubleshooting", "Setups", "Networking", "Peripherals"],
+  },
+  {
+    title: "Tools",
+    icon: Settings2,
+    skills: ["GitHub", "Vercel", "SEO basics", "Domains", "Deployment"],
+  },
 ];

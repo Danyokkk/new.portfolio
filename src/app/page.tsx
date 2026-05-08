@@ -4,8 +4,9 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Portfolio } from "@/components/Portfolio";
+import { ProofStrip } from "@/components/ProofStrip";
 import { Process } from "@/components/Process";
-import { Services } from "@/components/Services";
+import { Skills } from "@/components/Skills";
 import { ScrollAnimations } from "@/components/animations/ScrollAnimations";
 
 export default function HomePage() {
@@ -15,10 +16,11 @@ export default function HomePage() {
       <Header />
       <main>
         <Hero />
-        <Services />
-        <About />
-        <Process />
+        <ProofStrip />
         <Portfolio />
+        <Skills />
+        <Process />
+        <About />
         <CTA />
       </main>
       <Footer />
