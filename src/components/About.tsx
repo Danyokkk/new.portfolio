@@ -14,17 +14,14 @@ export function About() {
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
         <div data-reveal>
           <p className="font-display text-xs font-bold uppercase tracking-[0.22em] text-volt">About</p>
-          <h2 className="mt-4 font-display text-[2.1rem] font-black leading-[1.06] text-balance text-white md:text-5xl lg:text-6xl">
+          <h2 className="mt-4 font-display text-[1.9rem] font-black leading-[1.1] text-balance text-white md:text-5xl lg:text-6xl">
             Young, technical, curious, and building from real problems.
           </h2>
           <div className="mt-8 space-y-5 text-base leading-8 text-white/68 md:text-lg">
             <p>
-              Danylo Sakhno is from Ukraine and based in Cyprus. He is interested in IT, web development, AI, Python,
-              networking, PC building, and practical problem solving.
-            </p>
-            <p>
-              The work is shaped by a simple idea: build things that are useful in the real world, then make them clear
-              enough that other people can understand, trust, and use them.
+              I&apos;m Danylo, a young tech builder from Ukraine living in Cyprus. I&apos;m interested in web development,
+              AI, Python, networking, PC building, and solving real problems with technology. I like building projects
+              that are not just beautiful, but useful, fast, and clear.
             </p>
           </div>
         </div>

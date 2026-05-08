@@ -76,6 +76,22 @@ function ProjectVisual({ visual, title }: { visual: string; title: string }) {
         </>
       ) : null}
 
+      {visual === "automation" ? (
+        <>
+          <div className="absolute left-7 top-8 grid size-24 place-items-center rounded-[1.4rem] border border-aurora/25 bg-aurora/10">
+            <span className="size-10 rounded-full border border-volt/45 bg-volt/10 shadow-glow" />
+          </div>
+          <div className="absolute bottom-8 left-8 right-8 rounded-2xl border border-white/10 bg-ink/70 p-4">
+            <div className="grid grid-cols-5 gap-2">
+              {[32, 48, 28, 64, 42].map((height) => (
+                <span key={height} className="self-end rounded bg-gradient-to-t from-plasma/70 to-volt/55" style={{ height }} />
+              ))}
+            </div>
+            <span className="mt-4 block h-2 w-4/5 rounded bg-white/18" />
+          </div>
+        </>
+      ) : null}
+
       <p className="absolute bottom-5 right-6 font-display text-xs font-black uppercase tracking-[0.18em] text-white/36">{title}</p>
     </div>
   );
@@ -89,8 +105,8 @@ export function Portfolio() {
         <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
             eyebrow="Work"
-            title="Featured projects with real links and clear purpose."
-            text="Each project is presented around the problem it solves, the tools behind it, and the value it creates. No empty showcase language."
+            title="Selected work, built for real problems."
+            text="A portfolio should prove taste and usefulness. These projects show local products, client-facing websites, research work, and automation experiments."
           />
           <a href="https://github.com/Danyokkk" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-white/62 transition hover:text-white">
             More on GitHub
@@ -99,11 +115,12 @@ export function Portfolio() {
         </div>
 
         <div className="mt-12 grid gap-5 lg:grid-cols-2">
-          {portfolio.map(({ icon: Icon, title, problem, value, href, repo, tags, visual }) => (
+          {portfolio.map(({ icon: Icon, title, description, href, repo, tags, visual }) => (
             <article
               key={title}
               data-reveal
-              className="group overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/[0.07] to-white/[0.025] p-5 shadow-[0_30px_100px_rgba(0,0,0,.24)] transition duration-300 hover:-translate-y-1 hover:border-volt/35 md:p-6"
+              data-project-card
+              className="animated-border group overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/[0.07] to-white/[0.025] p-5 shadow-[0_30px_100px_rgba(0,0,0,.24)] transition duration-300 hover:-translate-y-1 hover:border-volt/35 hover:shadow-violet md:p-6"
             >
               <ProjectVisual visual={visual} title={title} />
               <div className="mt-6 flex items-start gap-4">
@@ -112,13 +129,8 @@ export function Portfolio() {
                 </span>
                 <div>
                   <h3 className="font-display text-2xl font-black text-white">{title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-white/62">{problem}</p>
+                  <p className="mt-2 text-sm leading-7 text-white/66">{description}</p>
                 </div>
-              </div>
-
-              <div className="mt-5 rounded-3xl border border-white/10 bg-ink/45 p-4">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-volt/80">Result / value</p>
-                <p className="mt-3 text-sm leading-7 text-white/68">{value}</p>
               </div>
 
               <div className="mt-5 flex flex-wrap gap-2">

@@ -1,7 +1,8 @@
 "use client";
 
+import { SmoothScrollProvider } from "@/components/animations/SmoothScrollProvider";
 import type { ReactNode } from "react";
 
 export function Providers({ children }: { children: ReactNode }) {
-  return <>{children}</>;
+  return <SmoothScrollProvider>{children}</SmoothScrollProvider>;
 }

@@ -25,6 +25,7 @@ body {
   color: #f7f8ff;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 
 ::selection {
@@ -64,5 +65,37 @@ body {
   .content-auto {
     content-visibility: auto;
     contain-intrinsic-size: 700px;
+  }
+
+  .animated-border {
+    position: relative;
+  }
+
+  .animated-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+    padding: 1px;
+    pointer-events: none;
+    background: linear-gradient(120deg, transparent 8%, rgba(33, 230, 255, 0.52), rgba(139, 92, 255, 0.46), transparent 72%);
+    background-size: 220% 100%;
+    opacity: 0.58;
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    animation: shimmer 5.5s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-border::before {
+    animation: none;
   }
 }

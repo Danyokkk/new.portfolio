@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { Github, Menu, Send, X } from "lucide-react";
+import { Github, Mail, Menu, X } from "lucide-react";
 import { links, navItems } from "@/lib/site-data";
 
-const socialLinks = [
+const headerLinks = [
   { label: "GitHub", href: links.github, icon: Github },
   { label: "Kaggle", href: links.kaggle, letter: "k" },
-  { label: "Telegram", href: links.telegram, icon: Send },
+  { label: "Contact", href: "#contact", icon: Mail },
 ];
 
 export function Header() {
@@ -37,13 +37,13 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <div className="hidden items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.035] p-1.5 md:flex">
-            {socialLinks.map(({ label, href, icon: Icon, letter }) => (
+            {headerLinks.map(({ label, href, icon: Icon, letter }) => (
               <a
                 key={label}
                 href={href}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`Open ${label}`}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noreferrer" : undefined}
+                aria-label={href.startsWith("#") ? label : `Open ${label}`}
                 className="inline-flex h-9 items-center gap-2 rounded-xl px-3 text-sm font-bold text-white/78 transition hover:bg-white/[0.075] hover:text-white"
               >
                 {Icon ? <Icon className="size-4 text-volt" /> : <span className="font-display text-lg font-black text-volt">{letter}</span>}
@@ -79,12 +79,13 @@ export function Header() {
             ))}
           </nav>
           <div className="mx-auto mt-3 grid max-w-7xl grid-cols-3 gap-2">
-            {socialLinks.map(({ label, href, icon: Icon, letter }) => (
+            {headerLinks.map(({ label, href, icon: Icon, letter }) => (
               <a
                 key={label}
                 href={href}
-                target="_blank"
-                rel="noreferrer"
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noreferrer" : undefined}
+                onClick={() => setOpen(false)}
                 className="inline-flex min-h-11 items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/[0.045] text-sm font-bold text-white/78"
               >
                 {Icon ? <Icon className="size-4 text-volt" /> : <span className="font-display font-black text-volt">{letter}</span>}

@@ -6,17 +6,19 @@ import { links } from "@/lib/site-data";
 export function CTA() {
   return (
     <MotionSection id="contact" className="scroll-mt-24 px-5 py-20 md:px-8 md:py-28">
-      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.25rem] border border-white/10 bg-gradient-to-br from-white/[0.08] to-white/[0.025] p-8 shadow-violet md:p-12">
+      <div
+        data-contact-card
+        className="animated-border relative mx-auto max-w-7xl overflow-hidden rounded-[2.25rem] border border-white/10 bg-gradient-to-br from-white/[0.08] to-white/[0.025] p-8 shadow-violet md:p-12"
+      >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_38%,rgba(33,230,255,.16),transparent_25rem),radial-gradient(circle_at_82%_44%,rgba(248,77,255,.16),transparent_25rem)]" />
         <div className="relative grid gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-end">
           <div>
             <p className="font-display text-xs font-bold uppercase tracking-[0.22em] text-volt">Contact</p>
-            <h2 className="mt-4 max-w-4xl font-display text-[2.1rem] font-black leading-[1.06] text-balance text-white md:text-5xl lg:text-6xl">
+            <h2 className="mt-4 max-w-4xl font-display text-[1.9rem] font-black leading-[1.1] text-balance text-white md:text-5xl lg:text-6xl">
               Have an idea, project, or collaboration?
             </h2>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-white/68">
-              Send the goal, the problem, or even a messy first idea. I can help turn it into a clear website, tool,
-              automation, or technical plan.
+              Let&apos;s build something useful, fast, and clean.
             </p>
           </div>
 

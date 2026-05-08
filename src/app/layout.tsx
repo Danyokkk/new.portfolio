@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Unbounded } from "next/font/google";
 import { Providers } from "@/components/Providers";
+import "lenis/dist/lenis.css";
 import "./globals.css";
 
 const inter = Inter({
@@ -17,11 +18,11 @@ const unbounded = Unbounded({
 
 export const metadata: Metadata = {
   title: "Danylo Sakhno | daan1k",
-  description: "Premium AI, web, data, and product portfolio for Danylo Sakhno / daan1k.",
+  description: "Personal developer portfolio for Danylo Sakhno / daan1k: websites, AI tools, Python projects, data work, and PC systems.",
   metadataBase: new URL("https://daan1k.xyz"),
   openGraph: {
     title: "Danylo Sakhno | daan1k",
-    description: "AI-powered web products, data systems, and modern digital builds.",
+    description: "Websites, AI tools, Python projects, data work, and practical technology builds.",
     url: "https://daan1k.xyz",
     siteName: "daan1k",
     type: "website",

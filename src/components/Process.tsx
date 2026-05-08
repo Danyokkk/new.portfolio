@@ -8,14 +8,23 @@ export function Process() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Process"
-          title="Simple enough to trust. Structured enough to ship."
-          text="A professional build is not magic. It is a clear goal, a good structure, careful implementation, and testing before anything gets shown as finished."
+          title="A clear path from idea to working product."
+          text="Good work starts before code. I focus on the goal, structure, interface, build quality, and testing so the final result feels useful and finished."
           align="center"
         />
-        <div className="relative mt-14 grid gap-4 lg:grid-cols-4">
-          <div className="absolute left-8 right-8 top-10 hidden h-px bg-gradient-to-r from-transparent via-volt/45 to-transparent lg:block" aria-hidden="true" />
+        <div className="relative mt-14 grid gap-4 lg:grid-cols-5">
+          <div
+            data-process-line
+            className="absolute left-8 right-8 top-10 hidden h-px origin-left scale-x-0 bg-gradient-to-r from-transparent via-volt/70 to-transparent lg:block"
+            aria-hidden="true"
+          />
           {processSteps.map(({ icon: Icon, title, text }, index) => (
-            <article key={title} data-reveal className="relative rounded-[1.75rem] border border-white/10 bg-white/[0.035] p-6 shadow-[0_24px_90px_rgba(0,0,0,.2)]">
+            <article
+              key={title}
+              data-reveal
+              data-process-step
+              className="relative rounded-[1.75rem] border border-white/10 bg-white/[0.035] p-6 shadow-[0_24px_90px_rgba(0,0,0,.2)]"
+            >
               <span className="font-display text-sm font-black text-aurora">0{index + 1}</span>
               <div className="relative mt-8 grid size-12 place-items-center rounded-2xl border border-white/10 bg-ink text-volt shadow-glow">
                 <Icon className="size-5" />

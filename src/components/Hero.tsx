@@ -12,11 +12,16 @@ const HeroStage = dynamic(() => import("@/components/HeroStage"), {
   ),
 });
 
+const headline = "I build websites, AI tools, and digital products that actually work.";
+const headlineWords = headline.split(" ");
+
 export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-hero-radial px-5 pb-16 pt-28 md:px-8 md:pb-24 md:pt-32">
       <div className="absolute inset-0 bg-mesh-lines bg-[size:78px_78px] opacity-35" aria-hidden="true" />
       <div className="absolute inset-x-0 top-0 h-56 bg-gradient-to-b from-volt/10 to-transparent" aria-hidden="true" />
+      <div className="absolute right-[-12rem] top-24 size-96 rounded-full bg-aurora/10 blur-3xl motion-safe:animate-pulse" aria-hidden="true" />
+      <div className="absolute bottom-0 left-[-10rem] size-80 rounded-full bg-volt/10 blur-3xl motion-safe:animate-float" aria-hidden="true" />
       <div className="absolute left-[-16%] top-1/2 h-px w-[70vw] rotate-[-14deg] bg-gradient-to-r from-transparent via-volt/80 to-transparent shadow-glow" aria-hidden="true" />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.92fr_1.08fr]">
@@ -36,12 +41,16 @@ export function Hero() {
               Developer based in Cyprus
             </span>
           </div>
-          <h1 className="font-display text-[2.35rem] font-black leading-[1.04] text-balance text-white md:text-6xl xl:text-7xl">
-            I build fast websites, AI tools, and digital products that actually work.
+          <h1 className="font-display text-[2.08rem] font-black leading-[1.08] text-balance text-white md:text-6xl xl:text-7xl" aria-label={headline}>
+            {headlineWords.map((word, index) => (
+              <span key={`${word}-${index}`} data-hero-word className="mr-[0.24em] inline-block will-change-transform">
+                {word}
+              </span>
+            ))}
           </h1>
           <p className="mt-7 max-w-2xl text-base leading-8 text-white/70 md:text-lg">
-            I&apos;m Danylo Sakhno, a young developer based in Cyprus. I work with web development, Python, AI automation,
-            data projects, and custom PC systems.
+            I&apos;m Danylo Sakhno, a young developer from Ukraine based in Cyprus. I create fast websites, automation
+            tools, Python projects, and clean digital experiences.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <ButtonLink href="#work" variant="primary">

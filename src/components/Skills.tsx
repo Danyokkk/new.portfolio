@@ -8,15 +8,16 @@ export function Skills() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Skills"
-          title="A practical stack for real web, data, AI, and hardware work."
-          text="The point is not to list every tool. It is to show the range Danylo can combine when a project needs both software thinking and hands-on technical problem solving."
+          title="Tools I can combine into useful technical work."
+          text="The strength is the mix: frontend, automation, Python, data, hardware, and enough practical IT thinking to debug real-world problems."
         />
 
-        <div className="mt-12 grid gap-4 lg:grid-cols-5">
+        <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {skillGroups.map(({ icon: Icon, title, skills }) => (
             <article
               key={title}
               data-reveal
+              data-skill-card
               className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-gradient-to-b from-white/[0.075] to-white/[0.025] p-6 shadow-[0_24px_80px_rgba(0,0,0,.22)] transition duration-300 hover:-translate-y-1 hover:border-volt/35"
             >
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-volt/55 to-transparent" />

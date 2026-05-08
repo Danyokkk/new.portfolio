@@ -4,14 +4,14 @@ import { BrainCircuit, Code2, Cpu, DatabaseZap, Globe2 } from "lucide-react";
 
 const orbitCards = [
   {
-    label: "Web",
+    label: "Web Development",
     text: "Fast websites and product UI",
     icon: Globe2,
     className: "left-5 top-8 md:left-10 md:top-10",
     line: "left-[22%] top-[28%] h-px w-[28%] rotate-[18deg] bg-volt/45",
   },
   {
-    label: "AI",
+    label: "AI Automation",
     text: "Automation and chat flows",
     icon: BrainCircuit,
     className: "right-5 top-12 md:right-7 md:top-16",
@@ -25,14 +25,14 @@ const orbitCards = [
     line: "right-[28%] bottom-[34%] h-px w-[22%] rotate-[18deg] bg-plasma/45",
   },
   {
-    label: "Data",
+    label: "Data Projects",
     text: "Dashboards and analysis",
     icon: DatabaseZap,
     className: "left-4 bottom-24 md:left-12 md:bottom-28",
     line: "left-[27%] bottom-[33%] h-px w-[22%] rotate-[-20deg] bg-volt/45",
   },
   {
-    label: "Hardware",
+    label: "PC Systems",
     text: "PC builds and troubleshooting",
     icon: Cpu,
     className: "left-1/2 bottom-5 -translate-x-1/2",
@@ -80,6 +80,7 @@ export default function HeroStage() {
         <div key={label}>
           <span className={`absolute hidden md:block ${line}`} aria-hidden="true" />
           <article
+            data-floating-card
             className={`absolute w-40 rounded-3xl border border-white/14 bg-ink/70 p-4 shadow-[0_20px_70px_rgba(0,0,0,.32)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-volt/40 md:w-48 ${className}`}
           >
             <div className="flex items-center gap-3">

@@ -8,6 +8,7 @@ export function ProofStrip() {
           <article
             key={title}
             data-reveal
+            data-proof-card
             className="group rounded-3xl border border-white/10 bg-white/[0.035] p-5 shadow-[0_18px_70px_rgba(0,0,0,.18)] transition duration-300 hover:-translate-y-1 hover:border-volt/35 hover:bg-white/[0.055]"
           >
             <div className="flex items-center gap-3">

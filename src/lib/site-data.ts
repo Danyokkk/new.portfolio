@@ -12,8 +12,9 @@ import {
   Hammer,
   Laptop,
   MonitorCog,
+  PenTool,
+  Route,
   Search,
-  Settings2,
   TestTube2,
   Wand2,
 } from "lucide-react";
@@ -24,7 +25,6 @@ export const links = {
   telegram: "https://t.me/daqxn",
   bus: "https://bus.daan1k.xyz",
   fish: "https://fish.daan1k.xyz",
-  work: "https://work.daan1k.xyz",
   radanumero: "https://radanumero.com",
   email: "mailto:dsakhno@isl.cy",
 };
@@ -46,28 +46,28 @@ export type IconCard = {
 export const proofCards: IconCard[] = [
   {
     icon: Laptop,
-    title: "Webflow / Wix / Tilda / Next.js",
-    text: "Comfortable moving from no-code builders to custom React and Next.js builds.",
+    title: "3+ years building websites",
+    text: "Hands-on work with real pages, client needs, structure, speed, and launch details.",
+  },
+  {
+    icon: Globe2,
+    title: "Webflow, Wix, Tilda, Next.js",
+    text: "Uses the right level of tool for the project, from builder platforms to custom React.",
   },
   {
     icon: DatabaseZap,
     title: "Python and data projects",
-    text: "Kaggle work, scripts, dashboards, practical analysis, and data cleaning.",
+    text: "Scripts, experiments, Kaggle work, dashboards, and practical data analysis.",
   },
   {
     icon: Bot,
     title: "AI automation workflows",
-    text: "AI-assisted research, Telegram workflows, chatbots, and repeatable systems.",
+    text: "ChatGPT workflows, Telegram automation, assistant-style tools, and prompt systems.",
   },
   {
     icon: MonitorCog,
-    title: "Custom PC systems",
-    text: "PC building, troubleshooting, setup, airflow, peripherals, and networking.",
-  },
-  {
-    icon: Globe2,
-    title: "Built in Cyprus",
-    text: "Local products and websites made around real problems, not portfolio filler.",
+    title: "Custom PC building",
+    text: "PC builds, troubleshooting, device setup, networking basics, and hardware problem solving.",
   },
 ];
 
@@ -75,22 +75,27 @@ export const processSteps = [
   {
     icon: Search,
     title: "Understand the goal",
-    text: "Clarify what needs to be built, who it is for, and what success should look like.",
+    text: "Clarify the real problem, audience, constraints, and what the finished product should do.",
   },
   {
-    icon: Wand2,
-    title: "Design the structure",
-    text: "Plan the user flow, content hierarchy, pages, components, and proof points before styling.",
+    icon: Route,
+    title: "Plan the structure",
+    text: "Map the pages, content hierarchy, data, tools, and user flow before design starts.",
+  },
+  {
+    icon: PenTool,
+    title: "Design the interface",
+    text: "Create a clean visual system that feels modern, readable, and easy to trust.",
   },
   {
     icon: Hammer,
     title: "Build the product",
-    text: "Create the frontend, automation, data workflow, or website with clean reusable pieces.",
+    text: "Turn the structure into a fast website, automation, script, dashboard, or digital tool.",
   },
   {
     icon: TestTube2,
     title: "Test and improve",
-    text: "Check responsiveness, speed, real links, accessibility, and the small details that make it feel finished.",
+    text: "Check responsiveness, links, performance, edge cases, copy clarity, and real usability.",
   },
 ];
 
@@ -100,38 +105,34 @@ export const portfolio = [
     href: links.bus,
     repo: "https://github.com/Danyokkk/cybus",
     icon: Bus,
-    problem: "Cyprus bus information is hard to follow when you need routes, stops, and timing quickly.",
-    value: "Turns transport data into a cleaner, faster product experience for people moving around Cyprus.",
+    description: "A Cyprus bus tracking concept designed to make public transport easier to understand and use.",
     visual: "transit",
-    tags: ["JavaScript", "Maps", "Public data"],
+    tags: ["Next.js", "UI/UX", "Maps", "Transport"],
   },
   {
     title: "Fishing Cyprus Wiki",
     href: links.fish,
     icon: Fish,
-    problem: "Local fishing knowledge is scattered across videos, forums, rules, and personal experience.",
-    value: "Organizes spots, species, local context, and search-friendly pages into one practical knowledge base.",
+    description: "A local fishing knowledge platform for Cyprus with spots, species, guides, and community-focused information.",
     visual: "wiki",
-    tags: ["Next.js", "Content", "Local SEO"],
-  },
-  {
-    title: "Work / Marketplace",
-    href: links.work,
-    repo: "https://github.com/Danyokkk/cypmfinal",
-    icon: Globe2,
-    problem: "Small businesses and local projects need clean pages, clear offers, and fast execution.",
-    value: "A client-facing direction for web work, project presentation, and marketplace-style digital services.",
-    visual: "market",
-    tags: ["TypeScript", "Business UX", "Launch"],
+    tags: ["Web platform", "Research", "Local SEO", "Content"],
   },
   {
     title: "radanumero.com",
     href: links.radanumero,
     icon: BriefcaseBusiness,
-    problem: "A business website needs to look credible, load fast, and be understandable immediately.",
-    value: "Webflow website and SEO structure focused on credibility, clear pages, and search visibility.",
+    description: "A Webflow website and SEO improvement project focused on structure, search visibility, and trust.",
     visual: "seo",
-    tags: ["Webflow", "SEO", "Website"],
+    tags: ["Webflow", "SEO", "Schema", "Client work"],
+  },
+  {
+    title: "AI / Python Projects",
+    href: links.kaggle,
+    repo: links.github,
+    icon: BrainCircuit,
+    description: "Small tools, scripts, and experiments using Python, automation, data, and AI workflows.",
+    visual: "automation",
+    tags: ["Python", "AI", "Automation", "Data"],
   },
 ];
 
@@ -143,22 +144,17 @@ export const skillGroups = [
   },
   {
     title: "AI & Automation",
-    icon: BrainCircuit,
-    skills: ["AI workflows", "Chatbots", "Telegram workflows", "Prompt systems", "Research automation"],
+    icon: Wand2,
+    skills: ["ChatGPT workflows", "AI assistants", "Telegram automation", "Prompt systems"],
   },
   {
-    title: "Data & Python",
+    title: "Python & Data",
     icon: DatabaseZap,
-    skills: ["Python", "Kaggle", "Dashboards", "Scripts", "Pandas / NumPy"],
+    skills: ["Python", "Scripts", "Data analysis", "Kaggle", "Dashboards"],
   },
   {
-    title: "Hardware",
+    title: "Hardware & IT",
     icon: Cpu,
-    skills: ["Custom PCs", "Troubleshooting", "Setups", "Networking", "Peripherals"],
-  },
-  {
-    title: "Tools",
-    icon: Settings2,
-    skills: ["GitHub", "Vercel", "SEO basics", "Domains", "Deployment"],
+    skills: ["Custom PCs", "Troubleshooting", "Networking basics", "Device setup"],
   },
 ];
